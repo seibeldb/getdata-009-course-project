@@ -17,7 +17,7 @@ The raw data was downloaded from the following URL on the date indicated:
     
 #Study Design
 
-The raw data represents measurements taken while 60 subjects performed 6 different activities (e.g walking).  There are thousands of rows of observations because many measurements were taken during the period that each subject performed each activity.  In addition to the two category values (subject.ID and activity.code), there were 561 numeric value metrics for each observation.  The data was recorded by a Samsung cell phone carried by the subject at waist level and originated from the accelerometer and the gyroscope within the cell phone.  Although there were only 6 metrics originally recorded in each observation, the raw data study team used time window sampling and sosphisticated data analysis to create a total of 561 feature value metrics for each observation.  In addition, the observations were divided into two separate files, one for training and the other for testing. 
+The raw data represents measurements taken while 60 subjects performed 6 different activities (e.g walking).  There are thousands of rows of observations because many measurements were taken during the period that each subject performed each activity.  In addition to the two category values (subject.ID and activity.code), there were 561 numeric value metrics for each observation.  The data was recorded by a cell phone (Samsung Galaxy S II) carried by the subject at waist level and originated from the accelerometer and the gyroscope within the cell phone.  Although there were only 6 metrics originally recorded in each observation, the raw data study team used time window sampling and sosphisticated data analysis to create a total of 561 feature value metrics for each observation.  In addition, the observations were divided into two separate files, one for training and the other for testing. 
 
 To understand the technical meaning of the raw data columns, please consult the raw data meta data which is located in this github branch, in the folder "RAW-Metadata".  It provides technical descriptions of the 561 feature meanings and the methods or concepts used by the raw data team.  Further technical understanding is outside the scope of this project.
 
@@ -74,7 +74,30 @@ The aggregate R function was used to calculate means of each numberic feature da
 
 #Code Book
 
-Variable Names and Descriptions
+###UNITS (unchanged from RAW data)
+
+This study has not changed the units provided by the RAW data, as described below.  These lines were copied exactly from the first few lines of the (included) Raw Metadata files "README.txt" and "features_info.txt".  Both files contain additional information that may be useful.
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+......
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+... see the included raw meta data files for more detail... 
+
+
+
+###Variable Names and Descriptions
 
 Category Variables
   "subject.ID"         Values: 1 to 30 (30 students)
