@@ -76,7 +76,11 @@ The aggregate R function was used to calculate means of each numberic feature da
 
 ###UNITS (unchanged from RAW data)
 
-This study has not changed the units provided by the RAW data, as described below.  These lines were copied exactly from the first few lines of the (included) Raw Metadata files "README.txt" and "features_info.txt".  Both files contain additional information that may be useful.
+An accelerometer is a device that measures proper acceleration ("g-force"). Proper acceleration is not the same as coordinate acceleration (rate of change of velocity). For example, an accelerometer at rest on the surface of the Earth will measure an acceleration g= 9.81 m/s2 straight upwards. By contrast, accelerometers in free fall orbiting and accelerating due to the gravity of Earth will measure zero. (from Wiki Accelerometer)
+
+In physics, the angular velocity (measured by a gyroscope) is defined as the rate of change of angular displacement and is a vector quantity (more precisely, a pseudovector) which specifies the angular speed (rotational speed) of an object and the axis about which the object is rotating. The SI unit of angular velocity is radians per second, although it may be measured in other units such as degrees per second, degrees per hour, etc. Angular velocity is usually represented by the symbol omega (ω, rarely Ω). (from Wiki Angular Velocity)
+
+This study has not changed the units provided by the RAW data, as described below.  The lines below were copied exactly from the first few lines of the (included) Raw Metadata files "README.txt" and "features_info.txt".  Both files contain additional information that may be useful.
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
