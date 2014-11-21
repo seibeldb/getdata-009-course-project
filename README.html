@@ -60,14 +60,67 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 <p>Course Project for: Johns Hopkins - Getting and Cleaning Data<br />instructors: by Jeff Leek, PhD, Roger D. Peng, PhD, Brian Caffo, PhD<br />Course Dates: November, 2014<br />Student email: <a href="mailto:seibeldb@gmail.com">seibeldb@gmail.com</a></p>
+<div id="readme" class="section level1">
+<h1>README</h1>
+<p>This repo is for a course project and contains the items required to complete the project. Project instructions are at the end of this file. The items to turn in on github include this “README” file, a single R script and a Code Book.</p>
+<ol style="list-style-type: decimal">
+<li>The code book <strong>“CodeBook.md”</strong>
+<ol style="list-style-type: lower-alpha">
+<li>Describes the raw data, study design, data transformations, tidy datasets produced and each output variable.<br /></li>
+<li>Two files are produced: “all.data” and “tidy2.txt”.</li>
+<li>Both datasets can be reproduced following the instructions below.</li>
+</ol></li>
+<li>Software used for this study.
+<ol style="list-style-type: lower-alpha">
+<li>Rstudio Version 0.98.1028</li>
+<li>MAC OSX 10.9.5</li>
+<li>R version 3.1.1 GUI 1.65 Mavericks build (6784)</li>
+<li>Github.app version Medium Hefson (192)</li>
+</ol></li>
+<li>The raw data exists as a zip file at the following URL and should be downloaded manually, placed into the same directory as the R script and then uncompressed in that location.
+<ul>
+<li>RAW Data Web URL: (<a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>)<br /></li>
+<li>Study download date: Wednesday, November 5, 2014 at 3:21 PM (EST)</li>
+</ul></li>
+<li>This R script <strong>“run_analysis.R”</strong> can be used to recreate the tidy data files. It does the follwoing:
+<ol style="list-style-type: lower-alpha">
+<li>can be modified to set the working directory to the location of the raw data (if needed),</li>
+<li>reads metadata files (activity_labels.txt and “features.txt”) from the working directory</li>
+<li>reads just the raw data columnes that are required from data sub-folders: “test” and “train”,</li>
+<li>merges and makes the raw data tidy,</li>
+<li>summarizes the tidy data,</li>
+<li>can be modified to set the working directory to a different output directory (if needed),</li>
+<li>writes the summarized data to a text file named <strong>“tidy2.txt”</strong>.</li>
+</ol></li>
+<li>A <strong>“RAW-Metadata”</strong>&quot; folder containing the original meta data files that were provided with the raw data.
+<ol style="list-style-type: lower-alpha">
+<li>activity_labels.txt</li>
+<li>features.txt</li>
+<li>README.txt</li>
+<li>features_info.txt</li>
+</ol></li>
+</ol>
+</div>
 <div id="project-instructions" class="section level1">
 <h1>Project Instructions</h1>
 <p>(copied from course materials)</p>
-<p>/* bullet<br />/** nested bullet<br />1. numbered<br />1.1. second level</p>
-<p>The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit:<br />1. A tidy data set as described below<br />2. a link to a Github repository with your script for performing the analysis, and<br />3. a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.<br />4. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.</p>
-<p>You should create one R script called run_analysis.R that does the following.<br />1. Merges the training and the test sets to create one data set.<br />2. Extracts only the measurements on the mean and standard deviation for each measurement.<br />3. Uses descriptive activity names to name the activities in the data set<br />4. Appropriately labels the data set with descriptive variable names.<br />5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.</p>
-<p>Please upload the tidy data set created in step 5 of the instructions. Please upload your data set as a txt file created with write.table() using row.name=FALSE (do not cut and paste a dataset directly into the text box, as this may cause errors saving your submission).</p>
-<p>RAW Data Web URL: (<a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>)<br />Download date: Wednesday, November 5, 2014 at 3:21 PM (EST)</p>
+<p>The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit:</p>
+<ol style="list-style-type: decimal">
+<li>A <strong>tidy</strong> data set as described below<br /></li>
+<li>A link to a <strong>Github repository</strong> with your script for performing the analysis, and<br /></li>
+<li>A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called <strong>“CodeBook.md”</strong>.<br /></li>
+<li>You should also include a <strong>“README.md”</strong> in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.</li>
+</ol>
+<p>You should create one R script called <strong>“run_analysis.R”</strong>&quot; that does the following.</p>
+<ol style="list-style-type: decimal">
+<li>Merges the training and the test sets to create one data set.<br /></li>
+<li>Extracts only the measurements on the mean and standard deviation for each measurement.<br /></li>
+<li>Uses descriptive activity names to name the activities in the data set.<br /></li>
+<li>Appropriately labels the data set with descriptive variable names.<br /></li>
+<li>From the data set in step 4, creates a second, independent <strong>tidy</strong> data set with the average of each variable for each activity and each subject.</li>
+</ol>
+<p>Please <strong>upload the tidy data set</strong> created in step 5 of the instructions. Please upload your data set <strong>as a txt file</strong> created with write.table() using row.name=FALSE (do not cut and paste a dataset directly into the text box, as this may cause errors saving your submission).</p>
+<p>RAW Data Web URL: (<a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>)</p>
 </div>
 
 
